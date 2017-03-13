@@ -2,16 +2,20 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:hsf="http://www.taobao.com/hsf"
        xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-       http://www.taobao.com/hsf
-       http://www.taobao.com/hsf/hsf.xsd" default-autowire="byName">
+       http://www.taobao.com/hsf http://www.taobao.com/hsf/hsf.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+       default-autowire="byName">
 
-    <bean id="memberBpo" class="cn.com.pansky.demo.member.MemberBpoImpl"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="cn.com.pansky.demo.member"/>
+
     <hsf:provider
             id="memberBpoProvider"
-            interface="cn.com.pansky.demo.member.MemberBpo"
-            ref="memberBpo"
+            interface="cn.com.pansky.demo.member.MemberBPO"
+            ref="memberBPOImpl"
             version="1.0.0"
             group="dev" />
 

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MemberController {
 
     @Autowired
-    private MemberBpo memberBpo;
+    private MemberBPO memberBpo;
 
     @ResponseBody
     @RequestMapping("/member/{id}")

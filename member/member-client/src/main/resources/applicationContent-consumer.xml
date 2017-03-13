@@ -9,7 +9,7 @@
 
     <hsf:consumer
             id="memberBpo"
-            interface="cn.com.pansky.demo.member.MemberBpo"
+            interface="cn.com.pansky.demo.member.MemberBPO"
             version="1.0.0"
             group="dev"/>
 
